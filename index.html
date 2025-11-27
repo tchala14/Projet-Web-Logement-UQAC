@@ -1,195 +1,263 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UQAC Logement - Trouvez votre logement étudiant</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UQAC Logement - Trouvez votre logement étudiant</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<!-- Header -->
-<header class="site-header">
-  <div class="container">
-    <div class="header-content">
-      <h1><span class="logo-uqac">UQAC</span> Logement</h1>
-      <nav class="main-nav">
-        <a href="#accueil" class="nav-link active" data-page="accueil">
-          <span class="nav-icon">🏠</span><span>Accueil</span>
-        </a>
-        <a href="#logements" class="nav-link" data-page="logements">
-          <span class="nav-icon">📋</span><span>Logements</span>
-        </a>
-        <a href="#favoris" class="nav-link" data-page="favoris">
-          <span class="nav-icon">❤️</span><span>Favoris</span>
-        </a>
-        <a href="#contact" class="nav-link" data-page="contact">
-          <span class="nav-icon">✉️</span><span>Contact</span>
-        </a>
-      </nav>
-    </div>
-  </div>
-</header>
-
-<!-- PAGE ACCUEIL -->
-<main id="accueil" class="page-section page-active">
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h2 class="hero-title">Trouvez votre logement étudiant près de l'UQAC</h2>
-      <p class="hero-subtitle">
-        La plateforme de référence pour les étudiants de l'Université du Québec à Chicoutimi
-      </p>
-
-      <!-- Search Box -->
-      <div class="search-box">
-        <div class="search-field">
-          <span class="search-icon">📍</span>
-          <div class="field-content">
-            <label class="field-label">Localisation</label>
-            <input
-                    type="text"
-                    placeholder="Près de l'UQAC"
-                    class="field-input"
-                    id="location"
-            />
-          </div>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <h1><span class="logo-uqac">UQAC</span> Logement</h1>
+                <nav class="main-nav">
+                    <a href="#accueil" class="nav-link active" data-page="accueil">
+                        <span class="nav-icon">🏠</span><span>Accueil</span>
+                    </a>
+                    <a href="#logements" class="nav-link" data-page="logements">
+                        <span class="nav-icon">📋</span><span>Logements</span>
+                    </a>
+                    <a href="#favoris" class="nav-link" data-page="favoris">
+                        <span class="nav-icon">❤️</span><span>Favoris</span>
+                    </a>
+                    <a href="#contact" class="nav-link" data-page="contact">
+                        <span class="nav-icon">✉️</span><span>Contact</span>
+                    </a>
+                </nav>
+            </div>
         </div>
+    </header>
 
-        <div class="search-field">
-          <span class="search-icon">💰</span>
-          <div class="field-content">
-            <label class="field-label">Budget max</label>
-            <input
-                    type="number"
-                    placeholder="1000"
-                    class="field-input"
-                    id="budget"
-            />
-          </div>
-        </div>
+    <!-- PAGE ACCUEIL -->
+    <main id="accueil" class="page-section page-active">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2 class="hero-title">Trouvez votre logement étudiant près de l'UQAC</h2>
+                <p class="hero-subtitle">
+                    La plateforme de référence pour les étudiants de l'Université du Québec à Chicoutimi
+                </p>
 
-        <div class="search-field search-field-last">
-          <span class="search-icon">🏡</span>
-          <div class="field-content">
-            <label class="field-label">Type de logement</label>
-            <select class="field-input" id="type">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <div class="search-field">
+                        <span class="search-icon">📍</span>
+                        <div class="field-content">
+                            <label class="field-label">Localisation</label>
+                            <input type="text" placeholder="Près de l'UQAC" class="field-input" id="location" />
+                        </div>
+                    </div>
+
+                    <div class="search-field">
+                        <span class="search-icon">💰</span>
+                        <div class="field-content">
+                            <label class="field-label">Budget max</label>
+                            <input type="number" placeholder="1000" class="field-input" id="budget" />
+                        </div>
+                    </div>
+
+                    <div class="search-field search-field-last">
+                        <span class="search-icon">🏡</span>
+                        <div class="field-content">
+                            <label class="field-label">Type de logement</label>
+                            <select class="field-input" id="type">
               <option value="Tous les types">Tous les types</option>
               <option value="Studio">Studio</option>
               <option value="3½">3½</option>
               <option value="4½">4½</option>
               <option value="5½">5½</option>
             </select>
-          </div>
-        </div>
+                        </div>
+                    </div>
 
-        <button class="btn-search" onclick="goToLogements()">
+                    <button class="btn-search" onclick="goToLogements()">
           <span class="search-icon">🔍</span>
           Rechercher
         </button>
-      </div>
+                </div>
 
-      <!-- Stats Section -->
-      <div class="stats-container">
-        <div class="stat-card">
-          <h3 class="stat-number">500+</h3>
-          <p class="stat-label">Logements disponibles</p>
+                <!-- Stats Section -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3 class="stat-number">500+</h3>
+                        <p class="stat-label">Logements disponibles</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">2000+</h3>
+                        <p class="stat-label">Étudiants satisfaits</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">0.5 km</h3>
+                        <p class="stat-label">Distance moyenne du campus</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Pourquoi choisir notre plateforme ?</h2>
+                <p class="section-subtitle">
+                    Une expérience optimisée pour les étudiants de l'UQAC
+                </p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3 class="feature-title">Recherche simplifiée</h3>
+                        <p class="feature-description">
+                            Trouvez votre logement idéal en quelques clics avec nos filtres avancés.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">✅</div>
+                        <h3 class="feature-title">Logements vérifiés</h3>
+                        <p class="feature-description">
+                            Tous les logements sont vérifiés pour garantir votre sécurité et confort.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3 class="feature-title">Proximité du campus</h3>
+                        <p class="feature-description">
+                            Une sélection de logements situés à proximité de l'UQAC.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Disponibilité en temps réel</h3>
+                        <p class="feature-description">
+                            Consultez les disponibilités mises à jour quotidiennement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PAGE LOGEMENTS -->
+    <main id="logements" class="page-section">
+        <section class="listings">
+            <div class="container">
+                <h2 class="section-title">Logements disponibles</h2>
+
+                <!-- Filtres -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Prix</label>
+                        <select id="price-filter">
+            <option value="all">Tous les prix</option>
+            <option value="0-900">Moins de 900</option>
+            <option value="900-1200">900 - 1200</option>
+            <option value="1200-1500">1200 - 1500</option>
+            <option value="1500-99999">Plus de 1500</option>
+          </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Distance</label>
+                        <select id="distance-filter">
+            <option value="all">Toutes distances</option>
+            <option value="0.5">Moins de 0.5 km</option>
+            <option value="1">Moins de 1 km</option>
+            <option value="2">Moins de 2 km</option>
+          </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Type</label>
+                        <select id="type-filter">
+            <option value="all">Tous les types</option>
+            <option value="Studio">Studio</option>
+            <option value="3½">3½</option>
+            <option value="4½">4½</option>
+            <option value="5½">5½</option>
+          </select>
+                    </div>
+
+                    <div class="filter-checkboxes">
+                        <label>
+            <input type="checkbox" id="furnished-filter" />
+            Meublé
+          </label>
+                        <label>
+            <input type="checkbox" id="available-filter" />
+            Disponible maintenant
+          </label>
+                        <label>
+            <input type="checkbox" id="utilities-filter" />
+            Services inclus
+          </label>
+                    </div>
+                </div>
+
+                <!-- Grille des logements -->
+                <div id="listings-grid" class="listings-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PAGE FAVORIS -->
+    <main id="favoris" class="page-section">
+        <section class="listings">
+            <div class="container">
+                <h2 class="section-title">Vos logements favoris</h2>
+                <p class="section-subtitle">
+                    Retrouvez ici tous les logements que vous avez ajoutés en favoris.
+                </p>
+
+                <div id="favorites-grid" class="listings-grid"></div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3><span class="logo-uqac">UQAC</span> Logement</h3>
+                    <p>
+                        La plateforme de référence pour trouver votre logement étudiant près du campus de l'UQAC. Simple, rapide et fiable.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Liens rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="#accueil" data-page="accueil">Accueil</a></li>
+                        <li><a href="#logements" data-page="logements">Logements</a></li>
+                        <li><a href="#favoris" data-page="favoris">Favoris</a></li>
+                        <li><a href="#contact" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>555, boulevard de l'Université</li>
+                        <li>Chicoutimi, QC G7H 2B1</li>
+                        <li>info@uqaclogement.ca</li>
+                        <li>418 545-5011</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 UQAC Logement. Tous droits réservés.</p>
+            </div>
         </div>
-        <div class="stat-card">
-          <h3 class="stat-number">2000+</h3>
-          <p class="stat-label">Étudiants satisfaits</p>
-        </div>
-        <div class="stat-card">
-          <h3 class="stat-number">0.5 km</h3>
-          <p class="stat-label">Distance moyenne du campus</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Why Choose Us Section -->
-  <section class="features">
-    <div class="container">
-      <h2 class="section-title">Pourquoi choisir notre plateforme ?</h2>
-      <p class="section-subtitle">
-        Une expérience optimisée pour les étudiants de l'UQAC
-      </p>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🔍</div>
-          <h3 class="feature-title">Recherche simplifiée</h3>
-          <p class="feature-description">
-            Trouvez votre logement idéal en quelques clics avec nos filtres avancés.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">✅</div>
-          <h3 class="feature-title">Logements vérifiés</h3>
-          <p class="feature-description">
-            Tous les logements sont vérifiés pour garantir votre sécurité et confort.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">📍</div>
-          <h3 class="feature-title">Proximité du campus</h3>
-          <p class="feature-description">
-            Une sélection de logements situés à proximité de l'UQAC.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3 class="feature-title">Disponibilité en temps réel</h3>
-          <p class="feature-description">
-            Consultez les disponibilités mises à jour quotidiennement.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-column">
-        <h3><span class="logo-uqac">UQAC</span> Logement</h3>
-        <p>
-          La plateforme de référence pour trouver votre logement étudiant près
-          du campus de l'UQAC. Simple, rapide et fiable.
-        </p>
-      </div>
-
-      <div class="footer-column">
-        <h4>Liens rapides</h4>
-        <ul class="footer-links">
-          <li><a href="#accueil" data-page="accueil">Accueil</a></li>
-          <li><a href="#logements" data-page="logements">Logements</a></li>
-          <li><a href="#favoris" data-page="favoris">Favoris</a></li>
-          <li><a href="#contact" data-page="contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>Contact</h4>
-        <ul class="footer-links">
-          <li>555, boulevard de l'Université</li>
-          <li>Chicoutimi, QC G7H 2B1</li>
-          <li>info@uqaclogement.ca</li>
-          <li>418 545-5011</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2025 UQAC Logement. Tous droits réservés.</p>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
