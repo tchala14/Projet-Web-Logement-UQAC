@@ -15,4 +15,6 @@ JSON comme pseudo‑base de données des logements (data.json) consommée par le
 #Connection avec Supabase
 En travaillant avec Supabase, on a utilisé de l'IA générative pour nous aider à faire la connection, dans ce processus on a repris tout le design du site avec l'IA et les technologies utilisées notamment Typescript à la place du Javascript utilisé avant, sur ceux une version alternative co-developpée avec l'IA générative dans le lien suivant donc le code est dans un autre dépôt Github.
 Lien vers le site: https://dahlia-tile-74885880.figma.site
-Donc on a la version Hard coding dans la branche Beta et la version Vibe Coding dans la branche Main
+
+- Donc on a la version Hard coding dans la branche Beta
+- la version Vibe Coding dans la branche Main
